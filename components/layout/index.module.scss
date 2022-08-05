@@ -1,0 +1,29 @@
+.container {
+  height: 100%;
+  background-color: #fafafa;
+}
+
+.header {
+  height: 48px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.main {
+  padding: 48px;
+  height: calc(100vh - 60px);
+  overflow: auto;
+}
+
+.footer {
+  text-align: center;
+  height: 50px;
+  padding-bottom: 10px;
+
+  a {
+    color: #8c8c8c;
+  }
+}

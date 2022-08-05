@@ -1,0 +1,22 @@
+.header {
+  background: #2c3e50;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+.left {
+  height: 100%;
+  line-height: 48px;
+  .homeName {
+    font-size: 18px;
+  }
+}
+
+.right {
+  font-size: 15px;
+  height: 100%;
+  line-height: 48px;
+  .option {
+    margin: 0 8px;
+  }
+}
