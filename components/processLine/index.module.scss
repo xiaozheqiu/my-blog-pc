@@ -1,0 +1,62 @@
+.processLine {
+  max-width: 66.666667%;
+  min-height: 500px;
+}
+.line {
+  margin: 11px 0;
+  float: left;
+  width: 2px;
+  background: #efefef;
+  .lineItem {
+    height: 50px;
+    position: relative;
+  }
+  .linePoint {
+    position: absolute;
+    left: -50%;
+    top: -2px;
+    height: 4px;
+    width: 4px;
+    background-color: #7b8a8b;
+    border-radius: 50%;
+  }
+  .lastLinePoint {
+    position: absolute;
+    left: -50%;
+    bottom: -2px;
+    height: 4px;
+    width: 4px;
+    background-color: #7b8a8b;
+    border-radius: 50%;
+  }
+}
+.content {
+  float: left;
+  margin: 0 0;
+  .contentItem {
+    padding: 0 24px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    margin: 0 0 28px 0;
+    .year {
+      font-size: 19px;
+    }
+    .title {
+      font-size: 15px;
+      .date {
+        display: inline-block;
+        color: #99a9bf;
+        width: 56px;
+      }
+      .text {
+        color: #2c323c;
+      }
+      .text:hover {
+        cursor: pointer;
+        color: #1d6fa5 !important;
+        text-decoration: underline;
+      }
+    }
+  }
+}

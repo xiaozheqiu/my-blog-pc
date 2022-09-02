@@ -3,21 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 8080",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "antd": "^4.22.8",
     "next": "12.2.1",
-    "particles-bg": "^2.5.5",
     "react": "18.2.0",
     "react-chrono": "^1.18.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "ahooks": "^3.7.0",
     "eslint": "8.19.0",
     "eslint-config-next": "12.2.1",
+    "mockjs": "^1.1.0",
     "prettier": "^2.7.1",
     "sass": "^1.53.0"
   }
