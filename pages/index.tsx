@@ -1,10 +1,10 @@
 import styles from '../styles/index.module.scss'
-import Layout from './components/layout'
+import Layout from '../components/layout'
 import Image from 'next/image'
 import React, { Fragment, useEffect, useState } from 'react'
-import { items } from './static'
-import TimeTools from './tools/timetools'
-import DropDown from './components/widgets/dropDown'
+import { items } from '../static'
+import TimeTools from '../tools/timetools'
+import DropDown from '../components/widgets/dropDown'
 
 const { getWebsiteRuntime } = new TimeTools()
 
