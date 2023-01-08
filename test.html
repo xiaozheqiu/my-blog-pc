@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+    </head>
+    <style>
+        .controller {
+            position: absolute;
+            width: 24px;
+            height: 12px;
+            z-index: 100;
+            bottom: 20px;
+            left: 50%;
+            margin-left: -12px;
+            -webkit-animation: bounce-down 1.6s linear infinite;
+            animation: bounce-down 1.6s linear infinite;
+
+            img {
+                position: absolute;
+            }
+        }
+
+        @-webkit-keyframes bounce-down {
+            25% {
+                -webkit-transform: translateY(-4px);
+            }
+            50%,
+            100% {
+                -webkit-transform: translateY(0);
+            }
+            75% {
+                -webkit-transform: translateY(4px);
+            }
+        }
+
+        @keyframes bounce-down {
+            25% {
+                transform: translateY(-4px);
+            }
+            50%,
+            100% {
+                transform: translateY(0);
+            }
+            75% {
+                transform: translateY(4px);
+            }
+        }
+    </style>
+    <body>
+        <p><br /></p>
+        <iframe
+            frameborder="no"
+            border="0"
+            marginwidth="0"
+            marginheight="0"
+            width="330"
+            height="86"
+            src="//music.163.com/outchain/player?type=2&id=2011546797&auto=1&height=66"
+        ></iframe>
+        <div data-w-e-type="video" data-w-e-is-void>
+            <iframe
+                frameborder="no"
+                border="0"
+                marginwidth="0"
+                marginheight="0"
+                width="330"
+                height="86"
+                src="//music.163.com/outchain/player?type=2&id=2011546797&auto=1&height=66"
+            ></iframe>
+        </div>
+        <p><br /></p>
+        <div class="controller">
+            <img
+                src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-5f7e3460-38bd-45dd-848a-d56d8287d2f9/649a4cc9-5e15-4056-a960-2edb9d78cb9a.svg"
+                alt=""
+            />
+        </div>
+    </body>
+</html>

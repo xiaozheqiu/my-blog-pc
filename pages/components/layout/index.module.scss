@@ -1,0 +1,19 @@
+.container {
+    height: 100%;
+}
+
+.header {
+    height: 48px;
+}
+
+.main {
+    //padding: 100px 48px;
+
+    //max-width: 75%;
+    //margin: 0 auto;
+}
+
+.showContainer {
+    height: calc(100vh - 48px);
+    overflow: auto;
+}

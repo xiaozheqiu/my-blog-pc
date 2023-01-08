@@ -1,51 +1,70 @@
 .index {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    font-family: Consolas, 'Courier New', Courier, FreeMono, 'Lucida Console', Monaco, monospace;
+    padding-top: calc((100vh - 48px - 450px) / 2);
 }
 
-.box {
-  width: 500px;
-  text-align: center;
+.introduce {
+    width: 500px;
+    text-align: center;
+    height: 450px;
+    margin: 0 auto;
+    /*居中展示 屏幕高度 - 头部高度 - 盒子高度*/
 }
-.title {
-  font-weight: 500;
+.user {
+    font-weight: 500;
+}
+.motto {
+    font-weight: 500;
+    margin: 32px 0 16px 0;
 }
 .items {
-  font-family: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica,
-    "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB",
-    "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN",
-    "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti",
-    SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
-  margin-top: 32px;
-  font-size: 18px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .itemsLabel {
-    cursor: pointer;
-  }
+    margin-top: 32px;
+    font-size: 18px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .itemsLabel {
+        cursor: pointer;
+        white-space: nowrap;
+    }
 }
 .about {
-  margin-top: 35px;
-  color: #212529;
-  font-family: Microsoft YaHei, serif;
-  font-size: 14px;
-  div {
-    line-height: 20px;
-  }
-  .howCreate {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .web {
-      height: 21px;
+    margin: 35px 0 80px 0;
+    color: #212529;
+    font-size: 14px;
+    font-family: Lato, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    a:hover {
+        text-decoration: underline;
     }
     a {
-      color: #3498db;
+        color: #3498db;
+        text-decoration: none;
     }
-  }
+    div {
+        line-height: 20px;
+    }
+    .howCreate {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .web {
+            height: 21px;
+        }
+    }
+    .power {
+    }
+}
+
+.myGithub {
+    margin: 32px 0 48px 0;
+    a {
+        color: #737386;
+        font-size: 15px;
+        font-family: arial, sans-serif;
+    }
 }

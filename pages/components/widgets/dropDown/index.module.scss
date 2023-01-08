@@ -1,0 +1,23 @@
+.dropDown {
+    -webkit-animation: bounce-down 1.6s linear infinite;
+    animation: bounce-down 1.6s linear infinite;
+    width: 30px;
+    margin: 0 auto;
+    cursor: pointer;
+    img {
+        width: 100%;
+    }
+}
+
+@keyframes bounce-down {
+    25% {
+        transform: translateY(-10px);
+    }
+    50%,
+    100% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(10px);
+    }
+}
