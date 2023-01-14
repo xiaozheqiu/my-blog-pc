@@ -13,8 +13,8 @@ const nextConfig = {
     ignoreDuringBuilds: true,
     // 配置构建 ID
     generateBuildId: async () => 'my-build-id',
-    // 设置自定义构建目录
-    distDir: 'build',
+    // // 设置自定义构建目录
+    // distDir: 'build',
     // 启用构建压缩
     compress: false,
     // 在生产构建期间启用浏览器源映射生成
