@@ -55,19 +55,19 @@ export default function Index() {
                                 clover
                             </a>
                             由
-                            <a href="https://idealclover.top/" target={'_blank'}>
+                            <a href="https://idealclover.top" target={'_blank'}>
                                 idealclover
                             </a>
                             用<span style={{ color: 'red' }}>❤</span> 制作
                         </div>
                         <div className={styles.power}>
                             © 2023{' '}
-                            <a href="https://xiaozheqiu.vercel.app/" target={'_blank'}>
+                            <a href="pages/index" target={'_blank'}>
                                 zheqiu
                             </a>
                             . Powered by<a href={'https://vercel.com/'}> Vercel</a>
                         </div>
-                        <div>网站已悄悄运行{websiteRuntime}</div>
+                        <div>{websiteRuntime ? `网站已悄悄运行${websiteRuntime}` : '正在获取网站运行信息...'}</div>
                     </div>
                     <DropDown />
                 </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../../components/layout";
-import ProcessLine from "../../components/processLine";
-import styles from "../../styles/timeLine.module.scss";
+import ProcessLine from "../../components/process-line";
+import styles from "../../styles/timeline.module.scss";
 
 export default function Timeline() {
   return (
