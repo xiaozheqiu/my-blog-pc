@@ -35,7 +35,7 @@ export default function Index() {
                     <h1 className={styles.user}>zheqiu</h1>
                     <h2 className={styles.motto}>Do what you say,say what you do.</h2>
                     <div className={styles.items}>
-                        {items.map((item, index) => (
+                        {items.map((                item, index) => (
                             <Fragment key={index}>
                                 <Image src={item.src} height={20} width={20} alt={''} />
                                 <span className={styles.itemsLabel}>{item.label}</span>
