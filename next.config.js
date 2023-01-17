@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-
+const { withAxiom } = require('next-axiom')
 const nextConfig = {
     // 严格模式
     reactStrictMode: true,
@@ -15,4 +15,4 @@ const nextConfig = {
     productionBrowserSourceMaps: false
 }
 
-module.exports = nextConfig
+module.exports = withAxiom(nextConfig)

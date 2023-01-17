@@ -1,16 +1,18 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import moment from 'moment/moment'
+import { log } from 'next-axiom'
 const Console = require('Console')
 
 // 错误监听
-export const onError = (err: any, request: NextApiRequest, response: NextApiResponse) => {
-    console.error(err.stack)
+export const onError = (error: Error, request: NextApiRequest, response: NextApiResponse) => {
+    log.error(error.message, error)
+    Console.error(error.stack)
     response.status(500).end('Something broke!')
 }
 
 // 匹配错误
 export const onNoMatch = (request: NextApiRequest, response: NextApiResponse) => {
-    response.status(404).end('api is not found')
+    response.status(404).end('api is not found!')
 }
 
 // 请求日志
