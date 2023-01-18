@@ -1,6 +1,6 @@
 import '../styles/globals.css'
+import 'antd/dist/reset.css'
 import type { AppProps } from 'next/app'
-// import type { NextWebVitalsMetric } from 'next/app'
 import ErrorBoundary from '../components/error-boundary'
 import { ConfigProvider } from 'antd'
 import 'antd/dist/reset.css'
@@ -8,7 +8,7 @@ import 'antd/dist/reset.css'
 import dayjs from 'dayjs'
 import 'dayjs/locale/zh-cn'
 import zhCN from 'antd/locale/zh_CN'
-import 'antd/dist/reset.css'
+
 dayjs.locale('zh-cn')
 
 export { reportWebVitals } from 'next-axiom'

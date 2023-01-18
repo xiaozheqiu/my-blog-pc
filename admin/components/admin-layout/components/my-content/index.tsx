@@ -2,18 +2,15 @@ import React from 'react'
 import { Layout, theme } from 'antd'
 import dynamic from 'next/dynamic'
 import { IRouterKey } from '../my-menu'
+import MyLoading from '../my-loading'
 const { Content } = Layout
 
-const DynamicPageA = dynamic(() => import('../../../../pageA'), {
-    loading: () => <div>'Loading...'</div>
-})
+const DynamicPageA = dynamic(() => import('../../../../pageA'), { loading: () => <MyLoading /> })
 
-const DynamicPageB = dynamic(() => import('../../../../pageB'), {
-    loading: () => <div>'Loading...'</div>
-})
-const DynamicPageC = dynamic(() => import('../../../../pageC'), {
-    loading: () => <div>'Loading...'</div>
-})
+const DynamicPageB = dynamic(() => import('../../../../pageB'), { loading: () => <MyLoading /> })
+
+const DynamicPageC = dynamic(() => import('../../../../pageC'), { loading: () => <MyLoading /> })
+
 const RenderContent = {
     pageA: <DynamicPageA />,
     pageB: <DynamicPageB />,

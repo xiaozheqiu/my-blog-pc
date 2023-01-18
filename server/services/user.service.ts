@@ -9,6 +9,11 @@ class UserService {
         const res = await User.findOne({ where: { account } })
         return res?.dataValues
     }
+    async updateUserInfo(account: string, token: string) {
+        await User.update({ token }, { where: { account } })
+        const res = await User.findOne({ where: { account } })
+        return { token: res?.dataValues?.token, account: res?.dataValues?.account }
+    }
 }
 
 export default new UserService()

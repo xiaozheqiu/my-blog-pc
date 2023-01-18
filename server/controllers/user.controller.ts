@@ -1,14 +1,15 @@
 import UserService from '../services/user.service'
 import bcrypt from 'bcryptjs'
 import { NextApiRequest, NextApiResponse } from 'next'
+import { getToken } from '../middleware/user.middleware'
 
-const { createUser, getUerInfo } = UserService
+const { createUser, updateUserInfo } = UserService
 
 export default class AuthController {
     // 登录
     static async login(request: NextApiRequest, response: NextApiResponse) {
         const { account } = request.body
-        const data = await getUerInfo({ account })
+        const data = await updateUserInfo(account, getToken())
         const body = { code: 200, message: '登录成功', data }
         response.status(200).json(body)
     }

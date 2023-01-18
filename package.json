@@ -15,16 +15,20 @@
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.10",
     "Console": "^1.1.0",
+    "ahooks": "^3.7.4",
     "antd": "^5.1.4",
+    "axios": "^1.2.3",
     "bcryptjs": "^2.4.3",
     "canvas-nest.js": "^2.0.4",
     "dayjs": "^1.11.7",
+    "js-cookie": "^3.0.1",
     "jsonwebtoken": "^9.0.0",
     "mysql2": "^3.0.1",
     "next": "13.1.1",
     "next-axiom": "^0.16.0",
     "next-connect": "^0.13.0",
     "prettier": "^2.8.1",
+    "qs": "^6.11.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.57.1",
@@ -33,6 +37,7 @@
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
-    "@types/jsonwebtoken": "^9.0.1"
+    "@types/jsonwebtoken": "^9.0.1",
+    "@types/qs": "^6.9.7"
   }
 }

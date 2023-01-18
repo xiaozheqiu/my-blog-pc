@@ -1,20 +1,28 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
 import { Layout, theme } from 'antd'
 import styles from './index.module.scss'
 import Head from 'next/head'
 import MyMenu, { IRouterKey } from './components/my-menu'
-
+import MyContent from './components/my-content'
+import dynamic from 'next/dynamic'
+import MyLoading from './components/my-loading'
+import { getAdminToken } from '../../../tools/storage'
 const { Header, Sider } = Layout
 
-import MyContent from './components/my-content'
+const DynamicLogin = dynamic(() => import('../../login'), { loading: () => <MyLoading /> })
 
 const App: React.FC = () => {
     const [collapsed, setCollapsed] = useState(false)
     const [menuKey, setMenuKey] = useState<Partial<IRouterKey>[]>(['pageA'])
+    const [adminToken, setAdminToken] = useState('none')
     const { token } = theme.useToken()
 
-    return (
+    useEffect(() => {
+        setAdminToken(getAdminToken() || '')
+    }, [])
+
+    const LayoutComponent = (
         <Layout className={styles.layout}>
             <Head>
                 <title>小折秋</title>
@@ -48,6 +56,8 @@ const App: React.FC = () => {
             </Layout>
         </Layout>
     )
+
+    return adminToken ? LayoutComponent : <DynamicLogin />
 }
 
 export default App

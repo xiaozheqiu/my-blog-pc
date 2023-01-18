@@ -21,7 +21,7 @@ class ErrorBoundary extends React.Component<IProps, IState> {
     }
     componentDidCatch(error: any, errorInfo: any) {
         // 在此处使用自己的错误日志记录服务
-        console.log({ error, errorInfo })
+        console.log({ error, errorInfo }, 'ErrorBoundary')
     }
     render() {
         // 检查是否抛出错误

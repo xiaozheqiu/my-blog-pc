@@ -22,6 +22,14 @@ const User = sequelize.define(
             allowNull: false,
             defaultValue: 0, // 默认值
             comment: '是否为管理员, 0: 不是管理员(默认); 1: 是管理员'
+        },
+        token: {
+            type: DataTypes.STRING,
+            comment: '令牌,过期时间为1day，'
+        },
+        email: {
+            type: DataTypes.STRING,
+            comment: '邮箱'
         }
     },
     {
