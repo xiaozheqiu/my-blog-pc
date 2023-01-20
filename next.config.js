@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const { withAxiom } = require('next-axiom')
+
 const nextConfig = {
     // 严格模式
     reactStrictMode: true,

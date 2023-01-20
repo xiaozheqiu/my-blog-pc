@@ -8,17 +8,20 @@ import MyContent from './components/my-content'
 import dynamic from 'next/dynamic'
 import MyLoading from './components/my-loading'
 import { getAdminToken } from '../../../tools/storage'
+import { getMyRoute, getQueryParams } from '../../../tools/browser'
 const { Header, Sider } = Layout
 
 const DynamicLogin = dynamic(() => import('../../login'), { loading: () => <MyLoading /> })
 
 const App: React.FC = () => {
     const [collapsed, setCollapsed] = useState(false)
-    const [menuKey, setMenuKey] = useState<Partial<IRouterKey>[]>(['pageA'])
+    const [menuKey, setMenuKey] = useState<Partial<IRouterKey>[]>(['write-something'])
     const [adminToken, setAdminToken] = useState('none')
     const { token } = theme.useToken()
 
     useEffect(() => {
+        const { componentName } = getQueryParams(window.location.search)
+        setMenuKey([getMyRoute(componentName || 'write-something')])
         setAdminToken(getAdminToken() || '')
     }, [])
 
