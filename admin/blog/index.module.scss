@@ -1,6 +1,5 @@
 .writeSomething {
     width: 100%;
-    height: calc(100vh - 64px - 96px);
     display: flex;
     flex-wrap: nowrap;
     .left {
@@ -8,7 +7,7 @@
         height: 100%;
         padding-right: 20px;
         .mdEditor {
-            height: calc(100vh - 64px - 96px - 120px);
+            height: calc(100vh - 64px - 96px - 22px - 33px  - 120px);
         }
     }
     .right {

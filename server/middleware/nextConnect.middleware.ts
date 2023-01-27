@@ -5,8 +5,8 @@ const Console = require('Console')
 
 // 错误监听
 export const onError = (error: Error, request: NextApiRequest, response: NextApiResponse) => {
-    log.error(error.message, error)
-    Console.error(error.stack)
+    log.error(error.message)
+    // Console.error(error.stack)
     response.status(500).end('Something broke!')
 }
 
@@ -17,13 +17,9 @@ export const onNoMatch = (request: NextApiRequest, response: NextApiResponse) =>
 
 // 请求日志
 export const logger = (request: NextApiRequest, response: NextApiResponse, next: Function) => {
-    const { body, query, url, method } = request
-    Console.success(
-        moment().format('YYYY-MM-DD HH:mm:ss'),
-        method,
-        url,
-        `query:${JSON.stringify(query)}`,
-        `body:${JSON.stringify(body)}`
-    )
+    // const { body, query } = request
+    // Console.success(`query:${JSON.stringify(query)}`, `body:${JSON.stringify(body)}`)
+    const { url, method } = request
+    Console.success(moment().format('YYYY-MM-DD HH:mm:ss'), method, url)
     next()
 }

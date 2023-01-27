@@ -8,20 +8,26 @@ import MyContent from './components/my-content'
 import dynamic from 'next/dynamic'
 import MyLoading from './components/my-loading'
 import { getAdminToken } from '../../../tools/storage'
-import { getMyRoute, getQueryParams } from '../../../tools/browser'
+import Browser from '../../../tools/browser'
+import { create } from 'zustand'
 const { Header, Sider } = Layout
+
+export const useStore = create<{ menuKey: Partial<IRouterKey>[]; setMenuKey: Function }>((set) => ({
+    menuKey: ['blog-list'],
+    setMenuKey: (menuKey: Partial<IRouterKey>[]) => set(() => ({ menuKey }))
+}))
 
 const DynamicLogin = dynamic(() => import('../../login'), { loading: () => <MyLoading /> })
 
 const App: React.FC = () => {
     const [collapsed, setCollapsed] = useState(false)
-    const [menuKey, setMenuKey] = useState<Partial<IRouterKey>[]>(['write-something'])
+    const { setMenuKey } = useStore()
     const [adminToken, setAdminToken] = useState('none')
     const { token } = theme.useToken()
 
     useEffect(() => {
-        const { componentName } = getQueryParams(window.location.search)
-        setMenuKey([getMyRoute(componentName || 'write-something')])
+        const { componentName } = Browser.getQueryParams(window.location.search)
+        setMenuKey([Browser.getMyRoute(componentName || 'blog-list')])
         setAdminToken(getAdminToken() || '')
     }, [])
 
@@ -45,7 +51,7 @@ const App: React.FC = () => {
                     />
                     <span> blog-admin </span>
                 </div>
-                <MyMenu menuKey={menuKey} setMenuKey={setMenuKey} />
+                <MyMenu />
             </Sider>
 
             <Layout className="site-layout">
@@ -55,7 +61,7 @@ const App: React.FC = () => {
                         onClick: () => setCollapsed(!collapsed)
                     })}
                 </Header>
-                <MyContent routerKey={menuKey} />
+                <MyContent />
             </Layout>
         </Layout>
     )

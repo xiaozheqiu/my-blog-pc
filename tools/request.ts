@@ -59,7 +59,7 @@ export function get(url: string, params: RawAxiosRequestConfig) {
  * @param {String} url [请求的url地址]
  * @param {Object} params [请求时携带的参数]
  */
-export function post(url: string, params: RawAxiosRequestConfig) {
+export function post(url: string, params: any) {
     return new Promise((resolve, reject) => {
         axios
             .post(url, QS.stringify(params))

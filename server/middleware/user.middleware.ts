@@ -51,7 +51,7 @@ export async function verifyUserPassword(request: NextApiRequest, response: Next
     }
 }
 
-// 校验字段是否缺失
+// 校验是否是管理员登录
 export async function hasAdmin(request: NextApiRequest, response: NextApiResponse, next: Function) {
     const { account } = request.body
     const userInfo = await getUerInfo({ account })

@@ -10,7 +10,10 @@ const sequelize = new Sequelize(MYSQL_DB, MYSQL_USER, MYSQL_PWD, {
     dialectModule: require('mysql2'),
     port: MYSQL_PORT,
     timezone: '+08:00',
-    logging: (msg) => Console.debug(msg)
+    logging: (msg) => Console.debug(msg),
+    dialectOptions: {
+        charset: 'utf8'
+    }
 })
 
 sequelize
